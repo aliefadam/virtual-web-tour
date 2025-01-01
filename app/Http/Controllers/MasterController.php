@@ -93,8 +93,8 @@ class MasterController extends Controller
             }
 
             // Link Whatsapp
-            if ($request->has("link_whatsapp")) {
-                $dataUpdated["link_whatsapp"] = $request->link_whatsapp;
+            if ($request->has("link_wa")) {
+                $dataUpdated["link_wa"] = $request->link_wa;
             }
 
             $master->update($dataUpdated);

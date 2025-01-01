@@ -24,8 +24,14 @@ class PageController extends Controller
 
     public function dashboard()
     {
+        $conditions = [
+            ["id", "!=", 4],
+            ["id", "!=", 13],
+        ];
+
         return view("dashboard", [
-            "title" => "Dashboard"
+            "title" => "Dashboard",
+            "stand_count" => User::where("role", "stand")->where($conditions)->count(),
         ]);
     }
 
