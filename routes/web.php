@@ -13,12 +13,14 @@ Route::middleware("guest")->group(function () {
 });
 Route::middleware("auth")->group(function () {
     Route::get("/logout", [AuthController::class, "logout"])->name("logout");
+    Route::get("/dashboard", [PageController::class, "dashboard"])->name("dashboard");
+    Route::get("/users", [PageController::class, "users"])->name("user-role");
+    Route::get("/master", [PageController::class, "master"])->name("master");
+    Route::put("/master/{id}", [MasterController::class, "update"])->name("master.update");
+    Route::get("/change-password", [PageController::class, "changePassword"])->name("change-password");
+    Route::put("/change-password", [AuthController::class, "changePasswordPost"])->name("change-password-post");
 });
 
-Route::get("/dashboard", [PageController::class, "dashboard"])->name("dashboard");
 Route::get("/virtual-tour", [PageController::class, "virtual_tour"])->name("virtual-tour");
-Route::get("/users", [PageController::class, "users"])->name("user-role");
-Route::get("/master", [PageController::class, "master"])->name("master");
-Route::put("/master/{id}", [MasterController::class, "update"])->name("master.update");
 
 Route::get("/get-data", [MasterController::class, "getData"])->name("getData");

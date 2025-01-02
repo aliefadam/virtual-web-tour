@@ -40,6 +40,35 @@ class AuthController extends Controller
         }
     }
 
+    public function changePasswordPost(Request $request)
+    {
+        $request->validate([
+            'old_password' => 'required|current_password|min:5',
+            'password' => 'required|min:5',
+            'password_confirmation' => 'required|same:password|min:5',
+        ], [
+            'old_password.required' => 'Password lama tidak boleh kosong',
+            'old_password.current_password' => 'Password lama tidak sesuai',
+            'old_password.min' => 'Password lama minimal 5 karakter',
+            'password.required' => 'Password baru tidak boleh kosong',
+            'password.min' => 'Password minimal 5 karakter',
+            "password_confirmation.required" => "Konfirmasi password tidak boleh kosong",
+            "password_confirmation.same" => "Konfirmasi password tidak sesuai",
+            'password_confirmation.min' => "Konfirmasi password minimal 5 karakter",
+        ]);
+
+        $user = User::find(Auth::user()->id);
+        $user->update([
+            "password" => bcrypt($request->password),
+        ]);
+
+        return redirect()->route("dashboard")->with("message", [
+            "title" => "Berhasil",
+            "text" => "Password berhasil diubah",
+            "icon" => "success",
+        ]);
+    }
+
     public function logout()
     {
         $user = User::find(Auth::user()->id);

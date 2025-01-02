@@ -50,4 +50,11 @@ class PageController extends Controller
             "master_data" => Master::firstWhere("user_id", Auth::user()->id),
         ]);
     }
+
+    public function changePassword()
+    {
+        return view("change-password", [
+            "title" => "Ganti Password",
+        ]);
+    }
 }

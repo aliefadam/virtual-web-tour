@@ -35,6 +35,9 @@
     {{-- DataTable --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
 
+    {{-- Sweet Alert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <!-- =======================================================
   * Template Name: NiceAdmin
@@ -46,6 +49,17 @@
 </head>
 
 <body>
+
+    @if (session()->has('message'))
+        <script>
+            Swal.fire({
+                title: "{{ session('message')['title'] }}",
+                text: "{{ session('message')['text'] }}",
+                icon: "{{ session('message')['icon'] }}"
+            });
+        </script>
+    @endif
+
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div class="d-flex align-items-center justify-content-between">
