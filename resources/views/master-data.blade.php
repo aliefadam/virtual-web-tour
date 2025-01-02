@@ -19,51 +19,76 @@
                 <div class="col-lg-6">
                     <h4 class="text-black mb-3" style="border-bottom: 1px solid gray; padding-bottom: 10px;">Data Gambar
                     </h4>
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="logo_text" class="form-label">Logo Text</label>
                         <img style="width: 400px; height: 100px; object-fit: cover" src="{{ $master_data->logo_text }}"
                             class="d-block mb-3" alt="">
+                        <span class="input-group-text mb-2">
+                            <i class="bi bi-info-circle-fill mr-3"></i>
+                            <span class="d-block mx-2 small">Harap masukkan gambar dengan rasio 16:9</span>
+                        </span>
                         <input type="file" class="form-control" id="logo_text" name="logo_text"
                             aria-describedby="emailHelp">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="logo_atas_kiri" class="form-label">Logo Stand</label>
                         <img style="width: 100px; height: 100px; object-fit: cover" src="{{ $master_data->logo_atas_kiri }}"
                             class="d-block mb-3" alt="">
+                        <span class="input-group-text mb-2">
+                            <i class="bi bi-info-circle-fill mr-3"></i>
+                            <span class="d-block mx-2 small">Harap masukkan gambar dengan rasio 1:1</span>
+                        </span>
                         <input type="file" class="form-control" id="logo_atas_kiri" name="logo_atas_kiri"
                             aria-describedby="emailHelp">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="logo_tengah" class="form-label">Logo Dinding</label>
                         <img style="width: 100px; height: 100px; object-fit: cover" src="{{ $master_data->logo_tengah }}"
                             class="d-block mb-3" alt="">
+                        <span class="input-group-text mb-2">
+                            <i class="bi bi-info-circle-fill mr-3"></i>
+                            <span class="d-block mx-2 small">Harap masukkan gambar dengan rasio 1:1</span>
+                        </span>
                         <input type="file" class="form-control" id="logo_tengah" name="logo_tengah"
                             aria-describedby="emailHelp">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="logo_rak_atas" class="form-label">Logo Banner Atas</label>
                         <img style="width: 100px; height: 100px; object-fit: cover" src="{{ $master_data->logo_rak_atas }}"
                             class="d-block mb-3" alt="">
+                        <span class="input-group-text mb-2">
+                            <i class="bi bi-info-circle-fill mr-3"></i>
+                            <span class="d-block mx-2 small">Harap masukkan gambar dengan rasio 1:1</span>
+                        </span>
                         <input type="file" class="form-control" id="logo_rak_atas" name="logo_rak_atas"
                             aria-describedby="emailHelp">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="logo_rak_tengah" class="form-label">Logo Banner Tengah</label>
                         <img style="width: 100px; height: 100px; object-fit: cover"
                             src="{{ $master_data->logo_rak_tengah }}" class="d-block mb-3" alt="">
+                        <span class="input-group-text mb-2">
+                            <i class="bi bi-info-circle-fill mr-3"></i>
+                            <span class="d-block mx-2 small">Harap masukkan gambar dengan rasio 1:1</span>
+                        </span>
                         <input type="file" class="form-control" id="logo_rak_tengah" name="logo_rak_tengah"
                             aria-describedby="emailHelp">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="logo_rak_bawah" class="form-label">Logo Banner Bawah</label>
                         <img style="width: 100px; height: 100px; object-fit: cover" src="{{ $master_data->logo_rak_bawah }}"
                             class="d-block mb-3" alt="">
+                        <span class="input-group-text mb-2">
+                            <i class="bi bi-info-circle-fill mr-3"></i>
+                            <span class="d-block mx-2 small">Harap masukkan gambar dengan rasio 1:1</span>
+                        </span>
                         <input type="file" class="form-control" id="logo_rak_bawah" name="logo_rak_bawah"
                             aria-describedby="emailHelp">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h4 class="text-black mb-3" style="border-bottom: 1px solid gray; padding-bottom: 10px;">Data Link dan
+                    <h4 class="text-black mb-3" style="border-bottom: 1px solid gray; padding-bottom: 10px;">Data Link
+                        dan
                         File
                     </h4>
                     <div class="mb-3">
